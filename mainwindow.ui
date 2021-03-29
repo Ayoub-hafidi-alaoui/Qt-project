@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>956</width>
+    <height>661</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout_2">
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout" stretch="1,1">
+      <item>
+       <layout class="QVBoxLayout" name="verticalLayout" stretch="1,0,0,0,0">
+        <item>
+         <widget class="QLabel" name="label">
+          <property name="text">
+           <string>                                PLease enter your message</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="lineEdit"/>
+        </item>
+        <item>
+         <widget class="QPushButton" name="pushButton">
+          <property name="text">
+           <string>PushButton</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QSlider" name="horizontalSlider_2">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QSlider" name="horizontalSlider">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QVBoxLayout" name="verticalLayout_3" stretch="1,2">
+        <item>
+         <widget class="BinaryView" name="widget" native="true">
+          <property name="styleSheet">
+           <string notr="true">margin:40px;
+</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="ParachuteView" name="widget_2" native="true"/>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>956</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu_FIle">
+    <property name="title">
+     <string>&amp;FIle</string>
+    </property>
+    <addaction name="action_quit"/>
+    <addaction name="action_open"/>
+    <addaction name="action_new"/>
+   </widget>
+   <widget class="QMenu" name="menu_Edit">
+    <property name="title">
+     <string>&amp;Edit</string>
+    </property>
+    <addaction name="separator"/>
+    <addaction name="action_copy"/>
+    <addaction name="action_paste"/>
+    <addaction name="action_undo"/>
+    <addaction name="action_redo"/>
+   </widget>
+   <widget class="QMenu" name="menu_About">
+    <property name="title">
+     <string>&amp;About</string>
+    </property>
+    <addaction name="action_About_us"/>
+   </widget>
+   <addaction name="menu_FIle"/>
+   <addaction name="menu_Edit"/>
+   <addaction name="menu_About"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="action_quit">
+   <property name="text">
+    <string>&amp;quit</string>
+   </property>
+  </action>
+  <action name="action_open">
+   <property name="text">
+    <string>&amp;open</string>
+   </property>
+  </action>
+  <action name="action_new">
+   <property name="text">
+    <string>&amp;new</string>
+   </property>
+  </action>
+  <action name="action_copy">
+   <property name="text">
+    <string>&amp;copy</string>
+   </property>
+  </action>
+  <action name="action_paste">
+   <property name="text">
+    <string>&amp;paste</string>
+   </property>
+  </action>
+  <action name="action_undo">
+   <property name="text">
+    <string>&amp;undo</string>
+   </property>
+  </action>
+  <action name="action_redo">
+   <property name="text">
+    <string>&amp;redo</string>
+   </property>
+  </action>
+  <action name="action_About_us">
+   <property name="text">
+    <string>&amp;About us</string>
+   </property>
+  </action>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>BinaryView</class>
+   <extends>QWidget</extends>
+   <header>binaryview.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>ParachuteView</class>
+   <extends>QWidget</extends>
+   <header location="global">parachuteview.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>
