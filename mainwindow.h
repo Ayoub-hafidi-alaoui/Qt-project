@@ -26,6 +26,11 @@ public slots:
     void updateMessage();
     void updateNbSectors(int);
     void updateNbPiste(int);
+    void changerSpinBox2Value(int);
+    void changerSpinBox1Value(int);
+    void changeSliderValue(int);
+    void changeSlider2Value(int);
+
 private slots:
     void on_action_About_us_triggered();
 };

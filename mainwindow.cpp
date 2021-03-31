@@ -12,7 +12,9 @@ MainWindow::MainWindow(QWidget *parent)
 {
     ui->setupUi(this);
     ui->horizontalSlider->setRange(10,40);
+    ui->spinBox_2->setRange(10,40);
     ui->horizontalSlider_2->setRange(2,30);
+    ui->spinBox->setRange(2,30);
     //connect(ui->pushButton,SIGNAL(clicked()),);
     setWindowTitle("Parachute Project");
 
@@ -33,6 +35,13 @@ MainWindow::MainWindow(QWidget *parent)
     connect(ui->pushButton,SIGNAL(clicked()),this,SLOT(updateMessage()));
     connect(ui->horizontalSlider,SIGNAL(valueChanged(int)),this,SLOT(updateNbSectors(int)));
     connect(ui->horizontalSlider_2,SIGNAL(valueChanged(int)),this,SLOT(updateNbPiste(int)));
+    connect(ui->horizontalSlider,SIGNAL(valueChanged(int)),this,SLOT(changerSpinBox2Value(int)));
+    connect(ui->horizontalSlider_2,SIGNAL(valueChanged(int)),this,SLOT(changerSpinBox1Value(int)));
+    connect(ui->spinBox_2,SIGNAL(valueChanged(int)),this,SLOT(changeSliderValue(int)));
+    connect(ui->spinBox,SIGNAL(valueChanged(int)),this,SLOT(changeSlider2Value(int)));
+    //connect(ui->spinBox_2,SIGNAL(valueChanged(int)),this,SLOT(update))
+    //connect(ui->spinBox,SIGNAL(valueChnaged()),this,SLOT(updateNbSectors(int)));
+    //connect(ui->spinBox,SIGNAL(valueChnaged()),this,SLOT(updateNbSectors(int)));
     //qWarning()<<model->getLenMessage();
     //ui->widget->setVector();
     //_p->setModel(model);
@@ -56,6 +65,18 @@ void MainWindow::updateNbSectors(int nb) {
 }
 void MainWindow::updateNbPiste(int nb) {
     ui->widget_2->updateNbPiste(nb);
+}
+void MainWindow::changerSpinBox2Value(int a) {
+    ui->spinBox_2->setValue(a);
+}
+void MainWindow::changerSpinBox1Value(int a) {
+    ui->spinBox->setValue(a);
+}
+void MainWindow::changeSliderValue(int a) {
+    ui->horizontalSlider->setValue(a);
+}
+void MainWindow::changeSlider2Value(int a) {
+    ui->horizontalSlider_2->setValue(a);
 }
 MainWindow::~MainWindow()
 {
