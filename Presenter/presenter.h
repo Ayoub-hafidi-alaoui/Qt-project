@@ -21,6 +21,8 @@ private :
     BinaryView *_v1;
     ParachuteView *_v2;
     QVector<int> _vectorInt;
+    int nb_secteur;
+    int nb_pistes;
 public slots:
     QString getMessageFromView();
 };

@@ -14,6 +14,8 @@ public:
     QVector<int> getVector();
     void updateNBSectors(int);
     void updateNbPiste(int);
+    int getNbSector();
+    int getNbTrack();
 protected:
     void paintEvent(QPaintEvent *e) override;
 private:

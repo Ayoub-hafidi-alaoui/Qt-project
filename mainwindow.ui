@@ -40,27 +40,21 @@ font-weight:bold;
 color:white;
 text-align:center;
 margin-top:10px;
-}
-QLabel::before {
-content: attr(data-text);
-position:absolute;
-top:0;
-left:0;
-width:0;
-height:100;
-color:#01fe87;
+animation: type 3s steps(22);
 overflow:hidden;
-animation: animate 6s l infinite;
+white-space:nowrap;
 }
-@keyframes animate
-{
-0%,10%,100% {
-	width:0;
+
+
+@keyframes type {
+0%{
+width:0ch;
 }
-70%,90% {
-width:100%
+100% {
+width:22ch;
 }
 }
+
 </string>
           </property>
           <property name="text">
@@ -111,10 +105,11 @@ widht:70%
          <widget class="QSlider" name="horizontalSlider_2">
           <property name="styleSheet">
            <string notr="true">background-color:white;
-
 padding:10px;
 margin-top:10px;
-margin-bottom:10px;</string>
+margin-bottom:10px;
+border-radius:9px;
+</string>
           </property>
           <property name="orientation">
            <enum>Qt::Horizontal</enum>
@@ -139,6 +134,7 @@ margin-bottom:10px;
 padding:10px;
 margin-top:10px;
 margin-bottom:10px;
+border-radius:9px;
 </string>
           </property>
           <property name="orientation">
@@ -152,7 +148,8 @@ margin-bottom:10px;
            <string notr="true">background-color:white;
 padding:5px;
 margin-top:10px;
-margin-bottom:10px;</string>
+margin-bottom:10px;
+</string>
           </property>
          </widget>
         </item>

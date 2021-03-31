@@ -19,7 +19,7 @@ void Presenter::setView2(ParachuteView *v2) {
 }
 void Presenter::setVectorInt() {
     Presenter::_vectorInt=_model->getKbit(_model->ConversionStringToAscii());
-    _model->stockMessage();
+    _model->stockMessage(Presenter::_v2->getNbSector(),Presenter::_v2->getNbTrack());
     //std::cout<<_vectorInt.at(0);
 }
 void Presenter::setMessage(QString message) {

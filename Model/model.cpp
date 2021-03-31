@@ -43,7 +43,7 @@ int Model::getLenMessage() {
 void Model::updateMessage( QString message) {
     Model::_message=message;
 }
-void Model::stockMessage() {
+void Model::stockMessage(int nbSecteur,int nbPiste) {
     //QString fileName=QFileDialog::getSaveFileName("../file.txt");
     QFile file("../Project/file.txt");
     /*if(!file.open(QIODevice::WriteOnly | QIODevice::Text)) {
@@ -54,6 +54,7 @@ void Model::stockMessage() {
         QTextStream out(&file);
         //file.seek(50);
         out<<(Model::_message)<<Qt::endl;
+        out<<"("<<"Nombre de secteurs :"<<nbSecteur<<","<<"Nombre de pistes"<<nbPiste<<")";
         file.flush();
         file.close();
     //}

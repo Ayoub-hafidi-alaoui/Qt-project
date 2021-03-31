@@ -97,7 +97,7 @@ MainWindow::~MainWindow()
 }
 void MainWindow::on_action_About_us_triggered()
 {
-    QMessageBox::information(this,tr("About us"),tr("About us"));
+    QMessageBox::information(this,tr("This is our Qt Project "),tr("This is our Qt Project"));
 }
 
 void MainWindow::on_action_spanish_triggered()

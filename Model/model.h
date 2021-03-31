@@ -12,7 +12,7 @@ public:
     QStringList ConversionStringToAscii( );
     QVector<int> getKbit(QStringList s);
     int getLenMessage();
-    void stockMessage();
+    void stockMessage(int,int);
 
 public slots:
     void updateMessage(QString message);

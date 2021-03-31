@@ -94,4 +94,10 @@ void ParachuteView::updateNbPiste(int piste) {
     ParachuteView::_nbtracks=piste;
     repaint();
 }
+int ParachuteView::getNbSector() {
+    return ParachuteView::_nbsectors;
+}
+int ParachuteView::getNbTrack() {
+    return ParachuteView::_nbtracks;
+}
 
