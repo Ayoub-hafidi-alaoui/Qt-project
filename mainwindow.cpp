@@ -6,6 +6,10 @@
 #include <QDebug>
 #include <QAction>
 #include <QMessageBox>
+#include <QTranslator>
+#include <QInputDialog>
+#include <QFile>
+
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
@@ -52,6 +56,15 @@ MainWindow::MainWindow(QWidget *parent)
     //qWarning()<<v.at(0);
 
     //v1>setPresenter(p);
+    QTranslator t;
+    if(QFile::exists("../Ressources/Translation.qrc/spanish.qm")) {
+        qWarning()<<"exist";
+    }
+    else {
+        qWarning()<<" not exist";
+
+    }
+    t.load(":/spanish.qm");
 }
 
 
@@ -85,4 +98,15 @@ MainWindow::~MainWindow()
 void MainWindow::on_action_About_us_triggered()
 {
     QMessageBox::information(this,tr("About us"),tr("About us"));
+}
+
+void MainWindow::on_action_spanish_triggered()
+{
+    QTranslator t;
+    t.load(":/spanish.qm");
+}
+
+void MainWindow::on_action_open_triggered()
+{
+
 }

@@ -33,5 +33,7 @@ public slots:
 
 private slots:
     void on_action_About_us_triggered();
+    void on_action_spanish_triggered();
+    void on_action_open_triggered();
 };
 #endif // MAINWINDOW_H

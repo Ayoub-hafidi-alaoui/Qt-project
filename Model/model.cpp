@@ -52,7 +52,7 @@ void Model::stockMessage() {
     //else {
         file.open(QIODevice::ReadWrite | QIODevice::Text);
         QTextStream out(&file);
-        file.seek(50);
+        //file.seek(50);
         out<<(Model::_message)<<Qt::endl;
         file.flush();
         file.close();

@@ -14,6 +14,18 @@
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget">
+   <property name="styleSheet">
+    <string notr="true">* {
+ background-color:#252839 ;
+}
+
+QPushButton:hover{
+background-color: #2dfa08 ;
+}
+QLineEdit{
+color:#8d98a1;
+}</string>
+   </property>
    <layout class="QVBoxLayout" name="verticalLayout_2">
     <item>
      <layout class="QHBoxLayout" name="horizontalLayout" stretch="1,1">
@@ -21,40 +33,128 @@
        <layout class="QVBoxLayout" name="verticalLayout" stretch="1,0,0,0,0,0,0">
         <item>
          <widget class="QLabel" name="label">
+          <property name="styleSheet">
+           <string notr="true">QLabel {
+font-weight:bold;
+
+color:white;
+text-align:center;
+margin-top:10px;
+}
+QLabel::before {
+content: attr(data-text);
+position:absolute;
+top:0;
+left:0;
+width:0;
+height:100;
+color:#01fe87;
+overflow:hidden;
+animation: animate 6s l infinite;
+}
+@keyframes animate
+{
+0%,10%,100% {
+	width:0;
+}
+70%,90% {
+width:100%
+}
+}
+</string>
+          </property>
           <property name="text">
            <string>                                PLease enter your message</string>
           </property>
          </widget>
         </item>
         <item>
-         <widget class="QLineEdit" name="lineEdit"/>
+         <widget class="QLineEdit" name="lineEdit">
+          <property name="styleSheet">
+           <string notr="true">QLineEdit {
+font-size:20px;
+background-color:white;
+  border:20px;
+margin :20px;
+padding:10px;
+border-radius:13px;
+margin-top:0px;
+margin-bottom:30px
+}
+QLineEdit::placeholder {
+text:Message;
+}</string>
+          </property>
+         </widget>
         </item>
         <item>
          <widget class="QPushButton" name="pushButton">
+          <property name="styleSheet">
+           <string notr="true">QPushButton {
+background-color: #f9bd27 ;
+border:20px;
+margin :20px;
+padding:10px;
+border-radius:13px;
+}
+QPushButton:hover {
+background-color: #2dfa08 ;
+widht:70%
+}</string>
+          </property>
           <property name="text">
-           <string>PushButton</string>
+           <string>Submit</string>
           </property>
          </widget>
         </item>
         <item>
          <widget class="QSlider" name="horizontalSlider_2">
+          <property name="styleSheet">
+           <string notr="true">background-color:white;
+
+padding:10px;
+margin-top:10px;
+margin-bottom:10px;</string>
+          </property>
           <property name="orientation">
            <enum>Qt::Horizontal</enum>
           </property>
          </widget>
         </item>
         <item>
-         <widget class="QSpinBox" name="spinBox"/>
+         <widget class="QSpinBox" name="spinBox">
+          <property name="styleSheet">
+           <string notr="true">background-color:white;
+padding:5px;
+margin-top:10px;
+margin-bottom:10px;
+</string>
+          </property>
+         </widget>
         </item>
         <item>
          <widget class="QSlider" name="horizontalSlider">
+          <property name="styleSheet">
+           <string notr="true">background-color:white;
+padding:10px;
+margin-top:10px;
+margin-bottom:10px;
+</string>
+          </property>
           <property name="orientation">
            <enum>Qt::Horizontal</enum>
           </property>
          </widget>
         </item>
         <item>
-         <widget class="QSpinBox" name="spinBox_2"/>
+         <widget class="QSpinBox" name="spinBox_2">
+          <property name="styleSheet">
+           <string notr="true">background-color:white;
+padding:5px;
+margin-top:10px;
+margin-bottom:10px;</string>
+          </property>
+         </widget>
         </item>
        </layout>
       </item>
@@ -63,7 +163,9 @@
         <item>
          <widget class="BinaryView" name="widget" native="true">
           <property name="styleSheet">
-           <string notr="true">margin:40px;
+           <string notr="true">padding-right:40px;
+
+
 </string>
           </property>
          </widget>
@@ -110,9 +212,16 @@
     </property>
     <addaction name="action_About_us"/>
    </widget>
+   <widget class="QMenu" name="menu_Translate">
+    <property name="title">
+     <string>&amp;Translate</string>
+    </property>
+    <addaction name="action_spanish"/>
+   </widget>
    <addaction name="menu_FIle"/>
    <addaction name="menu_Edit"/>
    <addaction name="menu_About"/>
+   <addaction name="menu_Translate"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
   <action name="action_quit">
@@ -153,6 +262,11 @@
   <action name="action_About_us">
    <property name="text">
     <string>&amp;About us</string>
+   </property>
+  </action>
+  <action name="action_spanish">
+   <property name="text">
+    <string>&amp;spanish</string>
    </property>
   </action>
  </widget>
