@@ -1,2 +1,2 @@
-Ayoub
-(Nombre de secteurs : 25,Nombre de pistes 10)
+ENSICAEN_RULES
+(Nombre de secteurs : 21,Nombre de pistes 5)

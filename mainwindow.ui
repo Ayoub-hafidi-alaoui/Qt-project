@@ -109,6 +109,7 @@ padding:10px;
 margin-top:10px;
 margin-bottom:10px;
 border-radius:9px;
+background-color:red;
 </string>
           </property>
           <property name="orientation">
@@ -135,6 +136,7 @@ padding:10px;
 margin-top:10px;
 margin-bottom:10px;
 border-radius:9px;
+background-color:red;
 </string>
           </property>
           <property name="orientation">
