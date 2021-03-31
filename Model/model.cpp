@@ -54,7 +54,7 @@ void Model::stockMessage(int nbSecteur,int nbPiste) {
         QTextStream out(&file);
         //file.seek(50);
         out<<(Model::_message)<<Qt::endl;
-        out<<"("<<"Nombre de secteurs :"<<nbSecteur<<","<<"Nombre de pistes"<<nbPiste<<")";
+        out<<"("<<"Nombre de secteurs : "<<nbSecteur<<","<<"Nombre de pistes "<<nbPiste<<")";
         file.flush();
         file.close();
     //}
