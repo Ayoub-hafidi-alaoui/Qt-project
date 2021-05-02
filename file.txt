@@ -1,2 +1,2 @@
 ENSICAEN_RULES
-(Nombre de secteurs : 21,Nombre de pistes 5)
+(Nombre de secteurs : 21,Nombre de pistes 5) 
